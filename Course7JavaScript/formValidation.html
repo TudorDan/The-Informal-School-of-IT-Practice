@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Form Validation Example</title>
+		<script type="text/javascript">
+			function checkForm() {
+				var valid = true;
+				if(document.getElementById('firstName').value == '') {
+					alert('Please type in your first name!');
+					document.getElementById('firstNameError').style.display = 'inline';
+					valid = false;
+				}
+				return valid;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="mainForm" onsubmit="return checkForm()">
+			<input type="text" id="firstName" />
+			<div id="firstNameError" style="display: none;">Missing first name!</div>
+			<input type="submit" value="Process">
+		</form>
+	</body>
+</html>

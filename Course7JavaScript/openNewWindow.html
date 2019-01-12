@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Opening New Window Example</title>
+		<script type="text/javascript">
+			function openNewWindow() {
+				var newWindow = window.open('', 'sampleWindow', 'width=300, height=300, menubar=yes, status=yes, resizable=yes');
+				newWindow.document.write('<html><head><title>Sample Title</title></head><body><h1>Sample Text</h1></body></html>');
+				newWindow.status = 'Hello folks';
+				newWindow.moveTo(100,100);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Open Window" onclick="openNewWindow()" />
+	</body>
+</html>

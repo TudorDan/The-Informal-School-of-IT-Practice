@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Date Object</title>
+		<script type="text/javascript">
+			function showDate() {
+				var now = new Date();
+				var result = 'It is now ' + now;
+				document.getElementById('timeField').innerHTML = result;
+			}
+		</script>
+	</head>
+	<body onload="showDate()">
+		<p id="timeField"></p>
+	</body>
+</html>

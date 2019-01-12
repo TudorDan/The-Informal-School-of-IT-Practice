@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Dom Manipulation</title>
+		<script type="text/javascript">
+			function change(state) {
+				var lampImg = document.getElementById('lamp');
+				lampImg.src = 'lamp_' + state + '.png';
+				var statusDiv = document.getElementById('statusDiv');
+				statusDiv.innerHTML = 'The lamp is ' + state;
+			}
+		</script>
+	</head>
+	<body>
+		<img id="lamp" src="lamp_off.png" onmouseover="change('on')" onmouseout="change('off')" />
+		<div id="statusDiv">The lamp is off</div>
+	</body>
+</html>
