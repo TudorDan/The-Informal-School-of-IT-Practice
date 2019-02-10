@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Image Clicked Example</title>
+	</head>
+	<body>
+		<img id="myImage" src="lamp_on.png" />
+		<script type="text/javascript">
+			var img = document.getElementById('myImage');
+			function imageClicked() {
+				console.log('The image was clicked!')
+			}
+			img.onclick = imageClicked;
+		</script>
+	</body>
+</html>
