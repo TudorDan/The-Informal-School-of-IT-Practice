@@ -13,7 +13,7 @@ xhr.send();
 
 /*POST
 Now that we have the user’s full name, let’s go ahead and change it. We will again address this user by ID. We’ll need to POST a message to our server for that particular user, and include the user’s new name inside the request body as a URL encoded string. The server will return the updated name in its response, so we should check that to make sure all is well.*/
-var newName = 'Johm Smith', 
+var newName = 'Johm Smith',
 xhr = new XMLHttpRequest();
 xhr.open('POST', 'myservice/username?id=some-unique-id');
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -41,11 +41,11 @@ xhr.send(JSON.stringify({
     age: 34
 }));
 
-/*Uploading Files -> POST 
+/*Uploading Files -> POST
 Given the following markup: <input type="file" id="test-input">
 let’s send a POST where the entire payload of the request consists of the file data:*/
-var formData = new FormData(), 
-file = document.getElementById('test-input').files[0], 
+var formData = new FormData(),
+file = document.getElementById('test-input').files[0],
 xhr = new XMLHttpRequest();
 formData.append('file', file);
 xhr.open('POST','myserver/uploads');
