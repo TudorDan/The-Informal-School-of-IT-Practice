@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercitii recapitulare - part 1</title>
+		<style type="text/css">
+			/*10. Creati un formular de contact, ca in exemplul de mai jos:*/
+			body {
+				padding: 30px;
+			}
+			form {
+				background-color: #EEE;
+				padding: 50px;
+				color: #AAA;
+			}
+			form, input, textarea, button {
+				font-family: 'Neuton', serif;
+			}
+			legend {
+				font-size: 32px;
+				text-shadow: 1px 2px white;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			#inputSpaces {
+				display: flex;
+				margin: 0 0 10px 0;
+			}
+			#inputSpaces > div {
+				width: 50%;
+			}
+			input {
+				display: block;
+				width: 100%;
+				margin: 0 0 10px 0;
+			}
+			#inputSpaces > textarea {
+				width: 50%;
+				display: block;
+				margin: 0 0 10px 50px;
+			}
+			input, textarea {
+				font-size: 24px;
+				border-width: 0px;
+				border-radius: 10px;
+				border: hidden;
+				padding: 10px;
+				box-shadow: 1px 2px #DDD;
+			}
+			input::placeholder, textarea::placeholder {
+				color: #AAA;
+			}
+			button {
+				background-color: #E74C3C;
+				color: white;
+				font-size: 24px;
+				padding: 10px;
+				width: 100%;
+				border-width: 0px;
+				border-radius: 10px;
+				border: hidden;
+			}
+		</style>
+		<link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
+	</head>
+	<body>
+		<form>
+			<legend>Elegant Contact Form</legend>
+			<div id="inputSpaces">
+				<div>
+					<input type="text" name="nume" placeholder="Name" />
+					<input type="email" name="email" placeholder="Email address" />
+					<input type="text" name="subject" placeholder="Subject" />
+				</div>
+				<textarea name="message" placeholder="Message"></textarea>
+			</div>
+			<button>Submit</button>
+		</form>
+	</body>
+</html>
