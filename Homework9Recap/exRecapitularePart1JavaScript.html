@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<meta charset="utf-8">
+		<title>Exercitii recapitulare - part 1</title>
+		<script type="text/javascript">
+			/**
+			 * Problema 1
+			 * Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza true daca numarul este par si fals daca este impar.
+			*/
+			function functie01(numar) {
+				return numar % 2 === 0;
+			}
+			console.log("1) Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza true daca numarul este par si fals daca este impar:");
+			console.log("functie01(49) = " + functie01(49));
+			console.log("functie01(120) = " + functie01(120));
+			console.log("functie01(-12) = " + functie01(-12));
+			console.log("functie01(-763) = " + functie01(-763));
+			console.log('\n');
+
+			/**
+			 * Problema 2
+			 * Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza maximul dintre cei 2.
+			*/
+			function functie02(a, b) {
+				return a > b ? a : b;
+			}
+			console.log("2) Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza maximul dintre cei 2:");
+			console.log("functie02(4, 9) = " + functie02(4, 9));
+			console.log("functie02(5, 5) = " + functie02(5, 5));
+			console.log("functie02(-6.5, 1.2) = " + functie02(-6.5, 1.2));
+			console.log("functie02('PI', 3.14) = " + functie02('PI', 3.14));
+			console.log('\n');
+			
+			/**
+			 * Problema 3
+			 * Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza maximul din acel array.
+			*/
+			function functie03(sir) {
+				return Math.max(...sir);
+			}
+			console.log("3) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza maximul din acel array:");
+			console.log("functie03([4, 3, -9, -2, 2, 1]) = " + functie03([4, 3, -9, -2, 2, 1]));
+			console.log("functie03([0, -110, 3.2, 0.5]) = " + functie03([0, -110, 3.2, 0.5]));
+			console.log("functie03([0.9, 0.5]) = " + functie03([0.9, 0.5]));
+			console.log("functie03([-0.8, 3.2, 0.5]) = " + functie03([-0.8, 3.2, 0.5]));
+			console.log('\n');
+
+			/**
+			 * Problema 4
+			 * Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza suma lor.
+			*/
+			function functie04(a, b) {
+				return a + b;
+			}
+			console.log("4) Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza suma lor:");
+			console.log("functie04(-90, -2.64) = " + functie04(-90, -2.64));
+			console.log("functie04(0.47, 0.83) = " + functie04(0.47, 0.83)); //DE CE?
+			console.log("functie04('F', '18 Hornet') = " + functie04('F', '18 Hornet'));
+			console.log("functie04('Mig', ' 31') = " + functie04('Mig', ' 31'));
+			console.log('\n');
+
+			/**
+			 * Problema 5
+			 * Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza suma tuturor numerelor din acel array.
+			*/
+			function functie05(sir) {
+				return sir.reduce( (suma, i) => suma + i );
+			}
+			console.log("5) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza suma tuturor numerelor din acel array:");
+			console.log("functie05([4, 3, 9, 2, 2, 1]) = " + functie05([4, 3, 9, 2, 2, 1]));
+			console.log("functie05([75, 3.04, 12, 80, 0.5]) = " + functie05([-75, -3.04, 12, 80, 0.5]));//DE CE?
+			console.log("functie05([-1, -2, -3, 4, 3, 2, 1]) = " + functie05([-1, -2, -3, 4, 3, 2, 1]));
+			console.log('\n');
+
+			/**
+			 * Problema 6
+			 * Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza produsul lor.
+			*/
+			function functie06(a, b) {
+				return a * b;
+			}
+			console.log("6) Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza produsul lor:");
+			console.log("functie06(6, 7) = " + functie06(6, 7));
+			console.log("functie06(3.3, -9) = " + functie06(3.3, -9));
+			console.log("functie06(1.8, 0.5) = " + functie06(1.8, 0.5));
+			console.log("functie06(-2, -4) = " + functie06(-2, -4));
+			console.log('\n');
+
+			/**
+			 * Problema 7
+			 * Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza produsul tuturor numerelor din acel array.
+			*/
+			function functie07(sir) {
+				return sir.reduce( (produs, i) => produs * i );
+			}
+			console.log("7) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza produsul tuturor numerelor din acel array:");
+			console.log("functie07([1, 2, 3, 4]) = " + functie07([1, 2, 3, 4]));
+			console.log("functie07([0.3, 2, 1.3, 5]) = " + functie07([0.3, 2, 1.3, 5])); //DE CE?
+			console.log("functie07([-7, 8, -1.9, 8]) = " + functie07([-7, 8, -1.9, 8]));  //DE CE?
+			console.log('\n');
+
+			/**
+			 * Problema 8
+			 * Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza media aritmetica a lor(suma numerelor / nr elementelor).
+			*/
+			function functie08(sir) {
+				let suma = 0;
+				let lungime = sir.length;
+				for(let i = 0; i < lungime; i++) {
+					suma += sir[i];
+				}
+				return suma / lungime;
+			}
+			console.log("8) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza media aritmetica a lor(suma numerelor / nr elementelor):");
+			console.log("functie08([3, 5, 4, 1, 2]) = " + functie08([3, 5, 4, 1, 2]));
+			console.log("functie08([5.33, 6.5, 8.66]) = " + functie08([5.33, 6.5, 8.66])); //6.83 De ce?
+			console.log("functie08([10, -3.2, 0.7, -1.8]) = " + functie08([10, -3.2, 0.7, -1.8]));
+			console.log('\n');
+
+			/**
+			 * Problema 9
+			 * Implementati o functie JavaScript care primeste ca si parametru un string si returneaza numarul de caractere din acel string.
+			*/
+			function functie09(sirCar) {
+				return sirCar.length;
+			}
+			console.log("9) Implementati o functie JavaScript care primeste ca si parametru un string si returneaza numarul de caractere din acel string:");
+			console.log("functie09('John Doe') = " + functie09('John Doe'));
+			console.log("functie09('Avionul F16 are o viteză maximă de 2.120 km/h!') = " + functie09('Avionul F16 are o viteză maximă de 2.120 km/h!'));
+			console.log('\n');
+
+			/**
+			 * Problema 10
+			 * Implementati o functie JavaScript care primeste ca si parametru un string si returneaza un nou string in care ordinea literelor este inversata(ex: revert("abc") va returna "cba").
+			*/
+			function functie10(sirCar) {
+				return sirCar.split('').reverse().join('');
+			}
+			console.log("10) Implementati o functie JavaScript care primeste ca si parametru un string si returneaza un nou string in care ordinea literelor este inversata(ex: revert(\"abc\") va returna \"cba\"):");
+			console.log("functie10('abc') = " + functie10('abc'));
+			console.log("functie10('Palindromuri') = " + functie10('Palindromuri'));
+			console.log("functie10('aerisirea atasata in caiac') = " + functie10('aerisirea atasata in caiac'));
+			console.log('\n');
+
+			/**
+			 * Problema 11
+			 * Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza inversul sau.(ex: revert(123) va returna 321).
+			*/
+			function functie11(numar) {
+				let caractere = numar.toString();
+				if(caractere[0] === '-') {
+					let sir = caractere.split('');
+					sir.shift();
+					sir = sir.reverse().join('');
+					return Number(sir) * Math.sign(numar);
+				} 
+				return Number(functie10(caractere)) * Math.sign(numar);
+			}
+			console.log("11) Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza inversul sau.(ex: revert(123) va returna 321):");
+			console.log("functie11(123) = " + functie11(123));
+			console.log("functie11(12.045) = " + functie11(12.045));
+			console.log("functie11(-3510) = " + functie11(-3510));
+			console.log("functie11(-79.68) = " + functie11(-79.68));
+			console.log('\n');
+
+			/**
+			 * Problema 12
+			 * Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza true sau false daca numarul este palindrom.(palindron este un numar care este egal cu inversul sau. ex: 121, 12321, 1122332211).
+			*/
+			function functie12(numar) {
+				return functie11(numar) === numar;
+			}
+			console.log("12) Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza true sau false daca numarul este palindrom.(palindron este un numar care este egal cu inversul sau. ex: 121, 12321, 1122332211):");
+			console.log("functie12(121) = " + functie12(121));
+			console.log("functie12(12321) = " + functie12(12321));
+			console.log("functie12(1122332211) = " + functie12(1122332211));
+			console.log("functie12(-47.58) = " + functie12(-47.58));
+			console.log('\n');
+
+			/**
+			 * Problema 13
+			 * Implementati o functie JavaScript care primeste ca si parametru un array(sir de string-uri) si returneaza un alt array ce are toate string-urile scrise cu litere mari.(ex: capitalize(['a','abc','dEF']) va returna ['A', 'ABC', 'DEF']).
+			*/
+			function functie13(vector) {
+				let rezultat = [];
+				for(let i = 0; i < vector.length; i++) {
+					rezultat.push(vector[i].toUpperCase());
+				}
+				return rezultat;
+			}
+			console.log("13) Implementati o functie JavaScript care primeste ca si parametru un array(sir de string-uri) si returneaza un alt array ce are toate string-urile scrise cu litere mari.(ex: capitalize(['a','abc','dEF']) va returna ['A', 'ABC', 'DEF']):");
+			console.log("functie13(['a','abc','dEF']) = " + functie13(['a','abc','dEF']));
+			console.log("functie13(['quick',' brown',' fox']) = " + functie13(['quick',' brown',' fox']));
+			console.log("functie13(['1','123','569']) = " + functie13(['1','123','569']));
+			console.log('\n');
+
+			/**
+			 * Problema 14
+			 * Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un alt array ce contine doar numerele pare.
+			*/
+			function functie14(vector) {
+				let rezultat = [];
+				for(let i = 0; i < vector.length; i++) {
+					if(vector[i] % 2 === 0) {
+						rezultat.push(vector[i]);
+					}
+				}
+				return rezultat;
+			}
+			console.log("14) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un alt array ce contine doar numerele pare:");
+			console.log("functie14([65, 103, -27, 0.8, -2.4, 90]) = " + functie14([65, 103, -27, 0.8, -2.4, 90]));
+			console.log("functie14([4.6, -78, 95, -62, 930]) = " + functie14([4.6, -78, 95, -62, 930]));
+			console.log('\n');
+
+			/**
+			 * Problema 15
+			 * Implementati o functie JavaScript care primete ca si parametru un array(sir de string-uri) si returneaza un alt array ce contine doar string-urile care incep cu litera 'a'. (ex filter(['aBc', 'ADF', 'ana are mere', 'gigel', 'BCD', 'abcd'] va returna ['aBc', 'ADF', 'ana are mere', 'abcd']).
+			*/
+			function functie15(vector) {
+				return vector.filter(vector => vector[0] === 'a' || vector[0] === 'A');
+			}
+			console.log("15) Implementati o functie JavaScript care primete ca si parametru un array(sir de string-uri) si returneaza un alt array ce contine doar string-urile care incep cu litera 'a'. (ex filter(['aBc', 'ADF', 'ana are mere', 'gigel', 'BCD', 'abcd'] va returna ['aBc', 'ADF', 'ana are mere', 'abcd']):");
+			console.log("functie15(['aBc', 'ADF', 'ana are mere', 'gigel', 'BCD', 'abcd']) = " + functie15(['aBc', 'ADF', 'ana are mere', 'gigel', 'BCD', 'abcd']));
+			console.log('\n');
+
+			/**
+			 * Problema 16
+			 * Scrieti o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un alt array ce contine doar numerele care sunt palindrom. (ex: filter([1, 12, 121, 123, 12321]) va returna [1, 121, 12321]).
+			*/
+			function functie16(vector) {
+				return vector.filter(vector => functie12(vector) === true);
+			}
+			console.log("16) Scrieti o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un alt array ce contine doar numerele care sunt palindrom. (ex: filter([1, 12, 121, 123, 12321]) va returna [1, 121, 12321]):");
+			console.log("functie16([1, 12, 121, 123, 12321]) = " + functie16([1, 12, 121, 123, 12321]));
+			console.log('\n');
+
+			/**
+			 * Problema 17
+			 * Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un nou array ce va contine numerele ordonate crescator(ex: sort([3,4,2,1]) va returna [1,2,3,4]).
+			*/
+			function functie17(vector) {
+				return vector.sort((a, b) => a - b);
+			}
+			console.log("17) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un nou array ce va contine numerele ordonate crescator(ex: sort([3,4,2,1]) va returna [1,2,3,4]):");
+			console.log("functie17([3,4,2,1]) = " + functie17([3,4,2,1]));
+			console.log('\n');
+
+			/**
+			 * Problema 18
+			 * Implementati o functie de JavaScript care face o cerere AJAX catre url-ul: https://jsonplaceholder.typicode.com/posts/1/comments si afiseaza la consola email-urile primite.
+			*/
+			async function functie18() {
+				try {
+					let url = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+					let raspuns = await fetch(url, {
+						method: 'GET'
+					});
+					if(raspuns.ok) {
+						let vectorDeObiecteServer = await raspuns.json();
+						for(let i in vectorDeObiecteServer) {
+							console.log(vectorDeObiecteServer[i].body);
+						}
+					} else {
+						throw new Error(raspuns.statusText);
+					}
+				} catch(Error) {
+					console.log('A fost o eroare: ', Error);
+				}
+			}
+			console.log("18) Implementati o functie de JavaScript care face o cerere AJAX catre url-ul: https://jsonplaceholder.typicode.com/posts/1/comments si afiseaza la consola email-urile primite:");
+			console.log("functie18() = " + functie18());
+			console.log('\n');
+
+			/**
+			 * Problema 19
+			 * Implementati o functie de JavaScript care face o cerere AJAX catre url-ul: https://jsonplaceholder.typicode.com/posts/1/comments si afiseaza adresele de email in browser intr-un tabel.
+			*/
+			async function functie19() {
+				try {
+					let url = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+					let raspuns = await fetch(url, {
+						method: 'GET'
+					});
+					if(raspuns.ok) {
+						let vectorDeObiecteServer = await raspuns.json();
+						let corpTabel = document.querySelector('tbody');
+						for(let i in vectorDeObiecteServer) {
+							corpTabel.innerHTML += `
+								<tr>
+									<td>${vectorDeObiecteServer[i].email}</td>
+								</tr>
+							`
+						}
+					} else {
+						throw new Error(raspuns.statusText);
+					}
+				} catch(Error) {
+					console.log('A fost o eroare: ', Error);
+				}
+			}
+			console.log("19) Implementati o functie de JavaScript care face o cerere AJAX catre url-ul: https://jsonplaceholder.typicode.com/posts/1/comments si afiseaza adresele de email in browser intr-un tabel:");
+			console.log("functie19() = " + functie19());
+			console.log('\n');
+
+			/**
+			 * Problema 20
+			 * Pentru formularul de contact de la exercitiul de HTML si CSS implementati o functie ce va fi apelata la click pe butonul Submit si care va face o cerere AJAX catre un server de Firebase(va fi nevoie sa creati un proiect nou in firebase).
+			*/
+			async function functie20() {
+				try {
+					
+				} catch(Error) {
+					console.log('A fost o eroare: ', Error);
+				}
+			}
+			console.log("20) Pentru formularul de contact de la exercitiul de HTML si CSS implementati o functie ce va fi apelata la click pe butonul Submit si care va face o cerere AJAX catre un server de Firebase(va fi nevoie sa creati un proiect nou in firebase):");
+			//console.log("functie20() = " + functie20());
+		</script>
+		<style type="text/css">
+			/*8. Implementati urmatorul tabel, folosind elemente de HTML:*/
+			table, th, td {
+				border: 1px solid black;
+
+			}
+			th, td {
+				text-align: left;
+				width: 100px;
+				padding: 2px;
+			}
+
+			/*10. Creati un formular de contact, ca in exemplul de mai jos:*/
+			body {
+				padding: 30px;
+			}
+			form {
+				background-color: #EEE;
+				padding: 50px;
+				color: #AAA;
+			}
+			form, input, textarea, button {
+				font-family: 'Neuton', serif;
+			}
+			legend {
+				font-size: 32px;
+				text-shadow: 1px 2px white;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			#inputSpaces {
+				display: flex;
+				margin: 0 0 10px 0;
+			}
+			#inputSpaces > div {
+				width: 50%;
+			}
+			input {
+				display: block;
+				width: 100%;
+				margin: 0 0 20px 0;
+			}
+			#inputSpaces > textarea {
+				width: 50%;
+				display: block;
+				margin: 0 0 20px 50px;
+			}
+			input, textarea {
+				font-size: 24px;
+				border-width: 0px;
+				border-radius: 10px;
+				border: hidden;
+				padding: 10px;
+				box-shadow: 1px 2px #DDD;
+			}
+			input::placeholder, textarea::placeholder {
+				color: #AAA;
+			}
+			button {
+				background-color: #E74C3C;
+				color: white;
+				font-size: 24px;
+				padding: 10px;
+				width: 100%;
+				border-width: 0px;
+				border-radius: 10px;
+				border: hidden;
+			}
+		</style>
+		<link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Adresele de email de la server</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+		<br/>
+		<hr/>
+		<br/>
+		<form>
+			<legend>Elegant Contact Form</legend>
+			<div id="inputSpaces">
+				<div>
+					<input type="text" name="nume" placeholder="Name" />
+					<input type="email" name="email" placeholder="Email address" />
+					<input type="text" name="subject" placeholder="Subject" />
+				</div>
+				<textarea name="message" placeholder="Message"></textarea>
+			</div>
+			<button>Submit</button>
+		</form>
+	</body>
+</html>
