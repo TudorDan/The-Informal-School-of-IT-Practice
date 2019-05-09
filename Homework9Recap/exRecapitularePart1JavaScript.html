@@ -308,10 +308,27 @@
 			 * Pentru formularul de contact de la exercitiul de HTML si CSS implementati o functie ce va fi apelata la click pe butonul Submit si care va face o cerere AJAX catre un server de Firebase(va fi nevoie sa creati un proiect nou in firebase).
 			*/
 			async function functie20() {
-				try {
-					
-				} catch(Error) {
-					console.log('A fost o eroare: ', Error);
+				event.preventDefault();
+				let formular = {};
+				formular.nume = document.querySelector('[name="nume"]').value;
+				formular.email = document.querySelector('[name="email"]').value;
+				formular.subiect = document.querySelector('[name="subject"]').value;
+				formular.mesaj = document.querySelector('[name="message"]').value;
+				if(formular.nume && formular.email && formular.subiect && formular.mesaj) {
+					try {
+						let url = 'https://recapitularepart1js20.firebaseio.com/.json';
+						let raspuns = await fetch(url, {
+							method: 'POST',
+							body: JSON.stringify(formular)
+						});
+						if(!raspuns.ok) {
+							throw new Error(raspuns.statusText);
+						}
+					} catch(Error) {
+						console.log('A fost o eroare: ', Error);
+					}
+				} else {
+					alert("Toate câmpurile din formular sunt obligatorii!");
 				}
 			}
 			console.log("20) Pentru formularul de contact de la exercitiul de HTML si CSS implementati o functie ce va fi apelata la click pe butonul Submit si care va face o cerere AJAX catre un server de Firebase(va fi nevoie sa creati un proiect nou in firebase):");
@@ -384,6 +401,7 @@
 				border-width: 0px;
 				border-radius: 10px;
 				border: hidden;
+				cursor: pointer;
 			}
 		</style>
 		<link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
@@ -410,7 +428,7 @@
 				</div>
 				<textarea name="message" placeholder="Message"></textarea>
 			</div>
-			<button>Submit</button>
+			<button onclick="functie20()">Submit</button>
 		</form>
 	</body>
 </html>
