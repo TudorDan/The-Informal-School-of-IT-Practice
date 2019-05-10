@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<meta charset="utf-8">
+		<title>Exerciții de recapitulare - partea 2</title>
+		<style type="text/css">
+			body, input {
+				font-size: 18px;
+			}
+			.cerinta {
+				color: #0AAFF1;
+				font-weight: bolder;
+			}
+			p[id^="rezultat"] {
+				font-weight: bolder;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Exerciții de recapitulare - partea 2</h1>
+			<div>
+				<p class="cerinta">1. Scrie un program JavaScript care sa calculeze inmultirea si impartirea a doua numere preluate din nou inputuri:</p>
+				<label>1st Number:&nbsp;<input type="text" name="primulNr"/></label><br/><br/>
+				<label>2nd Number:&nbsp;<input type="text" name="alDoileaNr"/></label><br/><br/>
+				<button id="muliplicaBtn">Multiply</button>&nbsp;<button id="imparteBtn">Divide</button>
+				<p>The Result is:</p>
+				<p id="rezultat01"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">2. Scrie un program JavaScript pentru a elimina un caracter dintr-un sir dat si apoi returneaza noul sir. Exemplu: JavaScript, eliminam s si va rezulta Javacript:</p>
+				<label>Șirul dat:&nbsp;<input type="text" name="sir02"/></label>
+				<label>Caracterul de eliminat:&nbsp;<input type="text" name="carElim" size="1" maxlength="1"/></label>
+				<button id="btn02">Elimină un caracter</button>
+				<p id="rezultat02"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">3. Scrie un program JavaScript pentru a verifica daca un string contine la inceput cuvantul “Java”, daca da returneaza true, altfel false:</p>
+				<label>String:&nbsp;<input type="text" name="sir03"/></label>
+				<button id="btn03">Verifică</button>
+				<p id="rezultat03"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">4. Scrie un program JavaScript pentru a inversa literele dintr-un sir de caractere si verifica daca este palindrom. Exemplu: pentru cuvantul code rezultatul va fi edoc nu este palindrom, capac inversat este capac si este palindrom:</p>
+				<label>Șir de caractere:&nbsp;<input type="text" name="sir04"/></label>
+				<button id="btn04">Verifică</button>
+				<p id="rezultat04"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">5. Scrie un program JavaScript care primeste un sir de cuvinte si determina care este cel mai lung cuvant. Exemplu: 'Web Development Tutorial' va afisa 'Development':</p>
+				<label>Șir de caractere:&nbsp;<input type="text" name="sir05"/></label>
+				<button id="btn05">Determină</button>
+				<p id="rezultat05"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">6. Scrie un program JavaScript care primeste un sir de numere si afiseaza numerele prime din acel sir. Exemplu: pentru [3, 22, 71, 13, 5, 62, 9] va afisa [3, 71, 13, 5]:</p>
+				<label>Șir de numere:&nbsp;<input type="text" name="sir06"/></label>
+				<button id="btn06">Afișează</button>
+				<p id="rezultat06"></p>
+			</div>
+		</main>
+		<!-- REZOLVĂRI -->
+		<script type="text/javascript">
+			/**
+			* Problema 1
+			* Scrie un program JavaScript care sa calculeze inmultirea si impartirea a doua numere preluate din nou inputuri.
+			*/
+			let btnMultiplicare = document.getElementById('muliplicaBtn');
+			let btnImpartire = document.getElementById('imparteBtn');
+			function inmulteste() {
+				let val1 = document.querySelector('[name="primulNr"]').value;
+				let val2 = document.querySelector('[name="alDoileaNr"]').value;
+				let rez = val1 * val2;
+				document.querySelector('#rezultat01').innerText = rez;
+			}
+			function imparte() {
+				let val1 = document.querySelector('[name="primulNr"]').value;
+				let val2 = document.querySelector('[name="alDoileaNr"]').value;
+				let rez = val1 / val2;
+				document.querySelector('#rezultat01').innerText = rez;
+			}
+			btnMultiplicare.addEventListener('click', inmulteste);
+			btnImpartire.addEventListener('click', imparte);
+
+			/**
+			* Problema 2
+			* Scrie un program JavaScript pentru a elimina un caracter dintr-un sir dat si apoi returneaza noul sir. Exemplu: JavaScript, eliminam s si va rezulta Javacript
+			*/
+			let btnElim = document.getElementById('btn02');
+			function functie02() {
+				let sirulDat = document.querySelector('[name="sir02"]').value;
+				let caraterDeElim = document.querySelector('[name="carElim"]').value;		
+				let vector = sirulDat.split('');
+				let pozElimCar = vector.indexOf(caraterDeElim);
+				if(pozElimCar >= 0) {
+					vector.splice(pozElimCar, 1);
+					let rez = vector.join('');
+					document.querySelector('#rezultat02').innerText = rez;
+				} else {
+					alert('Nu s-a găsit caracterul!');
+				}
+			}
+			btnElim.addEventListener('click', functie02);
+
+			/**
+			* Problema 3
+			* Scrie un program JavaScript pentru a verifica daca un string contine la inceput cuvantul “Java”, daca da returneaza true, altfel false.
+			*/
+			let btnVerif = document.getElementById('btn03');
+			function functie03() {
+				let stringulDat = document.querySelector('[name="sir03"]').value;
+				let rez = stringulDat.includes('Java');
+				document.querySelector('#rezultat03').innerText = rez;
+			}
+			btnVerif.addEventListener('click', functie03);
+
+			/**
+			* Problema 4
+			* Scrie un program JavaScript pentru a inversa literele dintr-un sir de caractere si verifica daca este palindrom. Exemplu: pentru cuvantul code rezultatul va fi edoc nu este palindrom, capac inversat este capac si este palindrom
+			*/
+			let buton04 = document.getElementById('btn04');
+			function functie04() {
+				let sir04 = document.querySelector('[name="sir04"]').value;
+				let oglindit = sir04.split('').reverse().join('');
+				if(sir04 === oglindit) {
+					document.querySelector('#rezultat04').innerText = 'Este palindrom!';
+				} else {
+					document.querySelector('#rezultat04').innerText = 'Nu este palindrom.';
+				}
+			}
+			buton04.addEventListener('click', functie04);
+
+			/**
+			* Problema 5
+			* Scrie un program JavaScript care primeste un sir de cuvinte si determina care este cel mai lung cuvant. Exemplu: 'Web Development Tutorial' va afisa 'Development'
+			*/
+			let buton05 = document.getElementById('btn05');
+			function functie05() {
+				let sir05 = document.querySelector('[name="sir05"]').value;
+				let vector = sir05.split(' ');
+				let rez = '';
+				for(let i = 0, max = 0; i < vector.length; i++) {
+					if(max < vector[i].length) {
+						max = vector[i].length;
+						rez = vector[i];
+					}
+				}
+				document.querySelector('#rezultat05').innerText = rez;
+			}
+			buton05.addEventListener('click', functie05);
+
+			/**
+			* Problema 6
+			* Scrie un program JavaScript care primeste un sir de numere si afiseaza numerele prime din acel sir. Exemplu: pentru [3, 22, 71, 13, 5, 62, 9] va afisa [3, 71, 13, 5]
+			*/
+		</script>
+	</body>
+</html>
