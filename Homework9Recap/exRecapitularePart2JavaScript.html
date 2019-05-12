@@ -11,7 +11,7 @@
 				color: #0AAFF1;
 				font-weight: bolder;
 			}
-			p[id^="rezultat"] {
+			p[id^="rezultat"], span[id^="rezultat"] {
 				font-weight: bolder;
 				color: red;
 			}
@@ -31,7 +31,7 @@
 			<hr/>
 			<div>
 				<p class="cerinta">2. Scrie un program JavaScript pentru a elimina un caracter dintr-un sir dat si apoi returneaza noul sir. Exemplu: JavaScript, eliminam s si va rezulta Javacript:</p>
-				<label>Șirul dat:&nbsp;<input type="text" name="sir02"/></label>
+				<label>Șirul dat:&nbsp;<input type="text" name="sir02"/></label>&nbsp;&nbsp;&nbsp;
 				<label>Caracterul de eliminat:&nbsp;<input type="text" name="carElim" size="1" maxlength="1"/></label>
 				<button id="btn02">Elimină un caracter</button>
 				<p id="rezultat02"></p>
@@ -63,6 +63,102 @@
 				<label>Șir de numere:&nbsp;<input type="text" name="sir06"/></label>
 				<button id="btn06">Afișează</button>
 				<p id="rezultat06"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">7. Scrie un program JavaScript care primeste un sir de numere si va elimina numerele duplicat din acel sir. Exemplu: [18, 27, 11, 46, 1, 459, 25, 18, 87, 11, 65] va afisa [18, 11, 27, 46, 1, 459, 25, 87, 65]:</p>
+				<label>Șir de numere:&nbsp;<input type="text" name="sir07"/></label>
+				<button id="btn07">Elimină</button>
+				<p id="rezultat07"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">9. Scrie un program JavaScript pentru a afisa urmatorul pattern:</p>
+				<p id="rezultat09"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">10. Scrie un program JavaScript care converteste temperatura din Celsius in grade Fahrenheit si invers. [ Formula : c/5 = (f-32)/9 [ unde c = temperatura in Celsius si f = temperatura in Fahrenheit ]<br/>
+				Output așteptat:<br/>
+				60°C reprezinta 140 °F<br/>
+				45°F reprezinta 7.222222222222222°C:</p>
+				<label><input type="number" name="celsius"/>&#8451;&nbsp;&nbsp;reprezintă:</label>&nbsp;&nbsp;
+				<span id="rezultat10Fahrenheit"></span><br/><br/>
+				<label><input type="number" name="fahrenheit"/>&#8457;&nbsp;&nbsp;reprezintă:</label>&nbsp;&nbsp;<span id="rezultat10Celsius"></span><br/><br/>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">11. Scrie un program JavaScript care să adauge itemi intr-un array gol si îi afișează:</p>
+				<input type="text" name="sir11"/>&nbsp;&nbsp;<button id="btn11Add">Add</button>&nbsp;&nbsp;
+				<button id="btn11Display">Display</button>
+				<hr/>
+				<p id="rezultat11"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">12. Se dau urmatoarele array-uri:<br/><br/>
+					&bull;&nbsp;color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];<br/><br/>
+					&bull;&nbsp;o = ["th","st","nd","rd"]<br/><br/>
+					Scrie un program care sa afiseze urmatoarele:<br/><br/>
+					&bull;&nbsp;1st choice is Blue<br/><br/>
+					&bull;&nbsp;2nd choice is Green<br/><br/>
+					&bull;&nbsp;3rd choice is Red<br/><br/>
+					&bull;&nbsp;…….</p>
+				<p id="rezultat12"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">13. Scrie un program JavaScript care calculeaza media aritmetica a elementelor unui sir de numere:</p>
+				<label>Șir de numere: <input type="text" name="mediaArit"/></label>&nbsp;&nbsp;
+				<button id="btn13">Calculează</button><br/>
+				<p id="rezultat13"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">14. Scrie un program JavaScript care calculeaza șirul lui Fibonacci:</p>
+				<label>Termenul „n” al șirului: <input type="number" name="fibonacci" maxlength="1" min="0"/></label>&nbsp;&nbsp;
+				<button id="btn14">Afișează șirul</button><br/>
+				<p id="rezultat14"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">15. Scrie un program JavaScript care calculeaza „n” Factorial:</p>
+				<label>Termenul „n”: <input type="number" name="factorial" maxlength="1" min="0"/></label>&nbsp;&nbsp;
+				<button id="btn15">Afișează „n” factorial</button><br/>
+				<p id="rezultat15"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">16. Pentru un numar preluat dintr-un input determina câte cifre are:</p>
+				<label>Număr: <input type="number" name="numar16" maxlength="1"/></label>&nbsp;&nbsp;
+				<button id="btn16">Afișează câte cifre are</button><br/>
+				<p id="rezultat16"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">17. Pentru un numar preluat dintr-un input afiseaza fiecare cifra a sa concatenata cu “;”:</p>
+				<label>Număr: <input type="number" name="numar17" maxlength="1"/></label>&nbsp;&nbsp;
+				<button id="btn17">Concatenează cu „;”</button><br/>
+				<p id="rezultat17"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">18. Scrie un program JavaScript care verifica daca un numar apare intr-un sir de numere:</p>
+				<label>Șir de numere: <input type="text" name="sir18"/></label>&nbsp;&nbsp;
+				<label>Număr de verificat: <input type="number" name="numar18" maxlength="1"/></label>&nbsp;&nbsp;
+				<button id="btn18">Verifică</button><br/>
+				<p id="rezultat18"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">19. Calculeaza suma elementelor de la 1 la n, unde n este preluat dintr-un input. Se vor insuma doar numerele impare:</p>
+				<label>N: <input type="number" name="num19" min="1" maxlength="1"/></label>&nbsp;&nbsp;
+				<button id="btn19">Calculează</button><br/>
+				<p id="rezultat19"></p>
+			</div>
+			<hr/>
+			<div>
+				<p class="cerinta">20. Implementeaza un calculator folosind html, css si js:</p>
 			</div>
 		</main>
 		<!-- REZOLVĂRI -->
@@ -158,6 +254,278 @@
 			/**
 			* Problema 6
 			* Scrie un program JavaScript care primeste un sir de numere si afiseaza numerele prime din acel sir. Exemplu: pentru [3, 22, 71, 13, 5, 62, 9] va afisa [3, 71, 13, 5]
+			*/
+			let buton06 = document.getElementById('btn06');
+			function prim(val) {
+				if(val <= 0) {
+					return false;
+				}
+				if(val < 2) {
+					return false;
+				}
+				if(val === 2) {
+					return true;
+				}
+				if(val % 2 === 0) {
+					return false;
+				}
+				for(let d = 3; d * d <= val; d += 2) {
+					if(val % d === 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+			function functie06() {
+				let sir06 = document.querySelector('[name="sir06"]').value;
+				let vector = sir06.split(' ');
+				let rez = [];
+				for(let i = 0; i < vector.length; i++) {
+					if(prim(vector[i])) {
+						rez.push(vector[i]);
+					}
+				}
+				document.querySelector('#rezultat06').innerText = rez;
+			}
+			buton06.addEventListener('click', functie06);
+
+			/**
+			* Problema 7
+			* Scrie un program JavaScript care primeste un sir de numere si va elimina numerele duplicat din acel sir. Exemplu: [18, 27, 11, 46, 1, 459, 25, 18, 87, 11, 65] va afisa [18, 11, 27, 46, 1, 459, 25, 87, 65]
+			*/
+			let buton07 = document.getElementById('btn07');
+			function functie07() {
+				let sir07 = document.querySelector('[name="sir07"]').value;
+				let vector = sir07.split(' ');
+				let rez = [... new Set(vector)];
+				document.querySelector('#rezultat07').innerText = rez;
+			}
+			buton07.addEventListener('click', functie07);
+
+			/**
+			* Problema 8
+			* Scrie un program JavaScript care itereaza numerele de la 1 la 15 si afiseaza la consola ce fel de numar este fiecare, adica daca este par sau impar. Output: 1 este impar, 2 este par, 3 este impar, 4 este par, etc
+			*/
+			function functie08() {
+				for(let i = 1; i <= 15; i++) {
+					if(i % 2 === 0) {
+						console.log(i + ' este par');
+					} else {
+						console.log(i + ' este impar');
+					}
+				}
+			}
+			console.log("8) Scrie un program JavaScript care itereaza numerele de la 1 la 15 si afiseaza la consola ce fel de numar este fiecare, adica daca este par sau impar. Output: 1 este impar, 2 este par, 3 este impar, 4 este par, etc:");
+			functie08();
+
+			/**
+			* Problema 9
+			* Scrie un program JavaScript pentru a afisa urmatorul pattern:
+			*/
+			function functie09() {
+				for(let i = 1; i < 6; i++) {
+					let rez = '';
+					for(let j = 0; j < i; j++) {
+						rez += '*';
+					}
+					document.querySelector('#rezultat09').innerHTML += `${rez}<br/>`;
+				}
+			}
+			functie09();
+
+			/**
+			* Problema 10
+			* Scrie un program JavaScript care converteste temperatura din Celsius in grade Fahrenheit si invers. [ Formula : c/5 = (f-32)/9 [ unde c = temperatura in Celsius si f = temperatura in Fahrenheit ]
+			Output aseptat:
+			60°C reprezinta 140 °F
+			45°F reprezinta 7.222222222222222°C
+			*/
+			let inputCelsius = document.querySelector('[name="celsius"]');
+			let inputFahrenheit = document.querySelector('[name="fahrenheit"]');
+			function convertCelsius() {
+				let gradeCelsius = document.querySelector('[name="celsius"]').value;
+				let rez = ((gradeCelsius / 5) * 9) + 32;
+				document.querySelector('#rezultat10Fahrenheit').innerHTML = `${rez} &#8457`;
+			}
+			function convertFahrenheit() {
+				let gradeFahrenheit = document.querySelector('[name="fahrenheit"]').value;
+				let rez = ((gradeFahrenheit - 32) / 9) * 5;
+				document.querySelector('#rezultat10Celsius').innerHTML = `${rez} &#8451`;
+			}
+			inputCelsius.addEventListener('input', convertCelsius);
+			inputFahrenheit.addEventListener('input', convertFahrenheit);
+
+			/**
+			* Problema 11
+			* Scrie un program JavaScript care să adauge itemi intr-un array gol si îi afișează.
+			*/
+			let buton11Adauga = document.getElementById('btn11Add');
+			let buton11Afiseaza = document.getElementById('btn11Display');
+			let rez11 = [];
+			function functie11adauga() {
+				let item = document.querySelector('[name="sir11"]').value;
+				if(item) {
+					rez11.push(item);
+				}	
+			}
+			function functie11afiseaza() {
+				let poz = rez11.length - 1;
+				if(poz !== - 1) {
+					document.querySelector('#rezultat11').innerHTML += `Element ${poz} = ${rez11[poz]}<br/><br/>`;
+				}
+			}
+			buton11Adauga.addEventListener('click', functie11adauga);
+			buton11Afiseaza.addEventListener('click', functie11afiseaza);
+
+			/**
+			* Problema 12
+			* Se dau urmatoarele array-uri:
+			color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+			o = ["th","st","nd","rd"]
+			Scrie un program care sa afiseze urmatoarele:
+			1st choice is Blue
+			2nd choice is Green
+			3rd choice is Red
+			…….
+			*/
+			let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+			let o = ["th","st","nd","rd"];
+			function functie12() {
+				for(let i = 0, j = 0; i < color.length; i++) {
+					if(i < 3) {
+						document.querySelector('#rezultat12').innerHTML += `
+							${i + 1}${o[++j]} choice is ${color[i]}<br/><br/>
+						`;
+					} else {
+						document.querySelector('#rezultat12').innerHTML += `
+							${i + 1}${o[0]} choice is ${color[i]}<br/><br/>
+						`;
+					}
+				}
+			}
+			functie12();
+
+			/**
+			* Problema 13
+			* Scrie un program JavaScript care calculeaza media aritmetica a elementelor unui sir de numere.
+			*/
+			buton13 = document.getElementById('btn13');
+			function functie13() {
+				let sir = document.querySelector('[name="mediaArit"]').value;
+				let vector = sir.split(' ');
+				let sum = 0;
+				for(let i = 0; i < vector.length; i++){
+					sum += Number(vector[i]);
+				}
+				document.querySelector('#rezultat13').innerText = sum / vector.length;
+			}
+			buton13.addEventListener('click', functie13);
+
+			/**
+			* Problema 14
+			* Scrie un program JavaScript care calculeaza șirul lui Fibonacci.
+			*/
+			let buton14 = document.getElementById('btn14');
+			function fibonacci() {
+				let n = document.querySelector('[name="fibonacci"]').value;
+				let vector = [0, 1];
+				for(let i = 2; i < n + 1; i++) {
+					vector.push(vector[i-2] + vector[i-1]);
+				}
+				let rez = [];
+				for(let j = 0; j <= n; j++) {
+					rez.push(vector[j]);
+				}
+				document.querySelector('#rezultat14').innerText = rez;
+			}
+			buton14.addEventListener('click', fibonacci);
+
+			/**
+			* Problema 15
+			* Scrie un program JavaScript care calculeaza „n” Factorial.
+			*/
+			let buton15 = document.getElementById('btn15');
+			function factorial() {
+				let n = document.querySelector('[name="factorial"]').value;
+				if(n === 0 || n === 1) {
+					document.querySelector('#rezultat15').innerText = 1;
+				} else {
+					let p = 1;
+					for(let i = 2; i <= n; i++) {
+						p *= i;
+					}
+					document.querySelector('#rezultat15').innerText = p;
+				} 	
+			}
+			buton15.addEventListener('click', factorial);
+
+			/**
+			* Problema 16
+			* Pentru un numar preluat dintr-un input determina cate cifre are.
+			*/
+			let buton16 = document.getElementById('btn16');
+			function functie16() {
+				let numar = document.querySelector('[name="numar16"]').value;
+				let sir = numar.toString();
+				let vector = sir.split('');
+				for(let i = 0; i < vector.length; i++) {
+					if(vector[i] === '-' || vector[i] === '.') {
+						vector.splice(i,1);
+					}
+				}
+				document.querySelector('#rezultat16').innerText = vector.length;
+			}
+			buton16.addEventListener('click', functie16);
+
+			/**
+			* Problema 17
+			* Pentru un numar preluat dintr-un input afiseaza fiecare cifra a sa concatenata cu “;”.
+			*/
+			let buton17 = document.getElementById('btn17');
+			function functie17() {
+				let numar = document.querySelector('[name="numar17"]').value;
+				let sir = numar.toString();
+				let vector = sir.split('');
+				for(let i = 0; i < vector.length; i++) {
+					document.querySelector('#rezultat17').innerHTML += `
+						${vector[i]};
+					`;
+				}
+			}
+			buton17.addEventListener('click', functie17);
+
+			/**
+			* Problema 18
+			* Scrie un program JavaScript care verifica daca un numar apare intr-un sir de numere.
+			*/
+			let buton18 = document.getElementById('btn18');
+			function functie18() {
+				let sir = document.querySelector('[name="sir18"]').value;
+				let numar = document.querySelector('[name="numar18"]').value;
+				let vector = sir.split(' ');
+				let rez = vector.includes(numar);
+				document.querySelector('#rezultat18').innerText = rez;
+			}
+			buton18.addEventListener('click', functie18);
+
+			/**
+			* Problema 19
+			* Calculeaza suma elementelor de la 1 la n, unde n este preluat dintr-un input. Se vor insuma doar numerele impare.
+			*/
+			let buton19 = document.getElementById('btn19');
+			function functie19() {
+				let n = document.querySelector('[name="num19"]').value;
+				let sum = 0;
+				for(let i = 1; i <= n; i+=2) {
+					sum += i;
+				}
+				document.querySelector('#rezultat19').innerText = sum;
+			}
+			buton19.addEventListener('click', functie19);
+
+			/**
+			* Problema 20
+			* Implementeaza un calculator folosind html, css si js.
 			*/
 		</script>
 	</body>
