@@ -15,6 +15,23 @@
 				font-weight: bolder;
 				color: red;
 			}
+			.wrapper {
+				max-width: 320px;
+			}
+			.wrapper_child {
+				min-width: 100%;
+				display: flex;
+				margin-bottom: 5px;
+			}
+			#afisaj {
+				min-width: 100%;
+				min-height: 24px;
+				border: 1px solid grey;
+			}
+			button[id^="tasta"] {
+				min-width: 24%;
+				cursor: pointer;
+			}
 		</style>
 	</head>
 	<body>
@@ -159,6 +176,35 @@
 			<hr/>
 			<div>
 				<p class="cerinta">20. Implementeaza un calculator folosind html, css si js:</p>
+				<div class="wrapper">
+					<div class="wrapper_child">
+						<div id="afisaj"></div>
+					</div>
+					<div class="wrapper_child">
+						<button id="tasta7">7</button>&nbsp;
+						<button id="tasta8">8</button>&nbsp;
+						<button id="tasta9">9</button>&nbsp;
+						<button id="tastaImpartire">/</button>
+					</div>
+					<div class="wrapper_child">
+						<button id="tasta4">4</button>&nbsp;
+						<button id="tasta5">5</button>&nbsp;
+						<button id="tasta6">6</button>&nbsp;
+						<button id="tastaInmultire">*</button>
+					</div>
+					<div class="wrapper_child">
+						<button id="tasta1">1</button>&nbsp;
+						<button id="tasta2">2</button>&nbsp;
+						<button id="tasta3">3</button>&nbsp;
+						<button id="tastaScadere">-</button>
+					</div>
+					<div class="wrapper_child">
+						<button id="tasta0">0</button>&nbsp;
+						<button id="tastaC">C</button>&nbsp;
+						<button id="tastaEgal">=</button>&nbsp;
+						<button id="tastaAdunare">+</button>
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- REZOLVĂRI -->
@@ -366,6 +412,7 @@
 				let item = document.querySelector('[name="sir11"]').value;
 				if(item) {
 					rez11.push(item);
+					alert('Elementul ' + item + ' a fost adăugat!');
 				}	
 			}
 			function functie11afiseaza() {
@@ -527,6 +574,55 @@
 			* Problema 20
 			* Implementeaza un calculator folosind html, css si js.
 			*/
+			let tasta0 = document.getElementById('tasta0');
+			let tasta1 = document.getElementById('tasta1');
+			let tasta2 = document.getElementById('tasta2');
+			let tasta3 = document.getElementById('tasta3');
+			let tasta4 = document.getElementById('tasta4');
+			let tasta5 = document.getElementById('tasta5');
+			let tasta6 = document.getElementById('tasta6');
+			let tasta7 = document.getElementById('tasta7');
+			let tasta8 = document.getElementById('tasta8');
+			let tasta9 = document.getElementById('tasta9');
+
+			let tastaImpartire = document.getElementById('tastaImpartire');
+			let tastaInmultire = document.getElementById('tastaInmultire');
+			let tastaScadere = document.getElementById('tastaScadere');
+			let tastaAdunare = document.getElementById('tastaAdunare');
+
+			let tastaEgal = document.getElementById('tastaEgal');
+			let tastaC = document.getElementById('tastaC');
+			let afis = document.querySelector('#afisaj');
+
+			function afiseazaVal(n) {
+				afis.innerHTML += n;
+			}
+			function calculeaza() {
+				let solutie = eval(afis.innerHTML);
+				afis.innerHTML = solutie;
+			}
+			function stergeAfis() {
+				afis.innerHTML = '';
+			}
+
+			tasta0.addEventListener('click', () => { afiseazaVal(0); });
+			tasta1.addEventListener('click', () => { afiseazaVal(1); });
+			tasta2.addEventListener('click', () => { afiseazaVal(2); });
+			tasta3.addEventListener('click', () => { afiseazaVal(3); });
+			tasta4.addEventListener('click', () => { afiseazaVal(4); });
+			tasta5.addEventListener('click', () => { afiseazaVal(5); });
+			tasta6.addEventListener('click', () => { afiseazaVal(6); });
+			tasta7.addEventListener('click', () => { afiseazaVal(7); });
+			tasta8.addEventListener('click', () => { afiseazaVal(8); });
+			tasta9.addEventListener('click', () => { afiseazaVal(9); });
+
+			tastaAdunare.addEventListener('click', () => { afiseazaVal('+'); });
+			tastaScadere.addEventListener('click', () => { afiseazaVal('-'); });
+			tastaInmultire.addEventListener('click', () => { afiseazaVal('*'); });
+			tastaImpartire.addEventListener('click', () => { afiseazaVal('/'); });
+
+			tastaEgal.addEventListener('click', () => { calculeaza(); });
+			tastaC.addEventListener('click', () => { stergeAfis(); });
 		</script>
 	</body>
 </html>
