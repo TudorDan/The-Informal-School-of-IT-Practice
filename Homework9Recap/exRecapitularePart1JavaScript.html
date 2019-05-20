@@ -51,7 +51,12 @@
 			 * Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza suma lor.
 			*/
 			function functie04(a, b) {
-				return a + b;
+				if(typeof(a) === 'number' && typeof(b) === 'number') {
+					return parseFloat((a + b).toFixed(13));
+				}	else {
+					return a + b;
+				}
+				
 			}
 			console.log("4) Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza suma lor:");
 			console.log("functie04(-90, -2.64) = " + functie04(-90, -2.64));
@@ -64,8 +69,18 @@
 			 * Problema 5
 			 * Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza suma tuturor numerelor din acel array.
 			*/
+			/*
 			function functie05(sir) {
 				return sir.reduce( (suma, i) => suma + i );
+			}*/
+			function functie05(sir) {
+				return sir.reduce( (suma, i) => {
+					if(typeof(suma) === 'number' && typeof(i) === 'number') {
+					return parseFloat((suma + i).toFixed(13));
+				}	else {
+					return suma + i;
+				}
+				} );
 			}
 			console.log("5) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza suma tuturor numerelor din acel array:");
 			console.log("functie05([4, 3, 9, 2, 2, 1]) = " + functie05([4, 3, 9, 2, 2, 1]));
@@ -113,7 +128,7 @@
 				return suma / lungime;
 			}
 			console.log("8) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza media aritmetica a lor(suma numerelor / nr elementelor):");
-			console.log("functie08([3, 5, 4, 1, 2]) = " + functie08([3, 5, 4, 1, 2]));
+			console.log("functie08([3, 5, 4, 1, 3]) = " + functie08([3, 5, 4, 1, 3]));
 			console.log("functie08([5.33, 6.5, 8.66]) = " + functie08([5.33, 6.5, 8.66])); //6.83 De ce?
 			console.log("functie08([10, -3.2, 0.7, -1.8]) = " + functie08([10, -3.2, 0.7, -1.8]));
 			console.log('\n');
@@ -211,6 +226,7 @@
 			console.log("14) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un alt array ce contine doar numerele pare:");
 			console.log("functie14([65, 103, -27, 0.8, -2.4, 90]) = " + functie14([65, 103, -27, 0.8, -2.4, 90]));
 			console.log("functie14([4.6, -78, 95, -62, 930]) = " + functie14([4.6, -78, 95, -62, 930]));
+			console.log("functie14([-9, -71, 67, 93]) = " + functie14([-9, -71, 67, 93]));
 			console.log('\n');
 
 			/**
@@ -239,11 +255,26 @@
 			 * Problema 17
 			 * Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un nou array ce va contine numerele ordonate crescator(ex: sort([3,4,2,1]) va returna [1,2,3,4]).
 			*/
-			function functie17(vector) {
+			/*function functie17(vector) {
 				return vector.sort((a, b) => a - b);
+			}*/
+			function functie17(vector) {
+				return vector.sort((a, b) => {
+					if(a > b) {
+						return 1;
+					}
+					if(a === b) {
+						return 0;
+					}
+					if(a < b) {
+						return -1;
+					}
+				});
 			}
 			console.log("17) Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un nou array ce va contine numerele ordonate crescator(ex: sort([3,4,2,1]) va returna [1,2,3,4]):");
 			console.log("functie17([3,4,2,1]) = " + functie17([3,4,2,1]));
+			console.log("functie17(['Tom','Ion','Alex','Ana']) = " + functie17(['Tom','Ion','Alex','Ana']));
+			console.log("functie17(['Tom', 3, 1,'Ana']) = " + functie17(['Tom', 3, 1,'Ana']));
 			console.log('\n');
 
 			/**
@@ -269,8 +300,8 @@
 				}
 			}
 			console.log("18) Implementati o functie de JavaScript care face o cerere AJAX catre url-ul: https://jsonplaceholder.typicode.com/posts/1/comments si afiseaza la consola email-urile primite:");
-			console.log("functie18() = " + functie18());
-			console.log('\n');
+			functie18();
+			//console.log('\n');
 
 			/**
 			 * Problema 19
@@ -300,8 +331,8 @@
 				}
 			}
 			console.log("19) Implementati o functie de JavaScript care face o cerere AJAX catre url-ul: https://jsonplaceholder.typicode.com/posts/1/comments si afiseaza adresele de email in browser intr-un tabel:");
-			console.log("functie19() = " + functie19());
-			console.log('\n');
+			functie19();
+			//console.log('\n');
 
 			/**
 			 * Problema 20
@@ -323,6 +354,12 @@
 						});
 						if(!raspuns.ok) {
 							throw new Error(raspuns.statusText);
+						} else {
+							alert('Datele au fost înregistrate cu succes!');
+							document.querySelector('[name="nume"]').value = "";
+							document.querySelector('[name="email"]').value = "";
+							document.querySelector('[name="subject"]').value = "";
+							document.querySelector('[name="message"]').value = "";
 						}
 					} catch(Error) {
 						console.log('A fost o eroare: ', Error);

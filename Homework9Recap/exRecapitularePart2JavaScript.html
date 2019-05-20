@@ -368,8 +368,8 @@
 			* Problema 9
 			* Scrie un program JavaScript pentru a afisa urmatorul pattern:
 			*/
-			function functie09() {
-				for(let i = 1; i < 6; i++) {
+			function functie09(n) {
+				for(let i = 1; i <= n; i++) {
 					let rez = '';
 					for(let j = 0; j < i; j++) {
 						rez += '*';
@@ -377,7 +377,7 @@
 					document.querySelector('#rezultat09').innerHTML += `${rez}<br/>`;
 				}
 			}
-			functie09();
+			functie09(5);
 
 			/**
 			* Problema 10
